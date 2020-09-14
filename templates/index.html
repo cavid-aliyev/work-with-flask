@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Ana səhifə
+{% endblock %}
+
+
+{% block body %}
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4">Sayt haqqında qısa məlumat</h1>
+        <p class="lead">Saytda insanlar qeydlər apara, silə və dəyişə bilərlər. Əsasəndə
+            proqramçıların gündəlik nə qədər etməli olduqları işlərin etmədiklərini nəzərə alsaq, bu saytın bir xeyri dəyər məncə</p>
+        <hr class="my-4">
+        <p>Qeydlərivizi aparmaq üçün aşağıdakı düyməni sıxın</p>
+        <a class="btn btn-primary btn-lg" href="/create-article" role="button">Qeyd apar</a>
+    </div>
+</div>
+{% endblock %}

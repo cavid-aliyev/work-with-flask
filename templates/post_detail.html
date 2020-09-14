@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ meqale.title }}
+{% endblock %}
+
+
+{% block body %}
+<div class="container">
+
+    <h1>{{ meqale.title }}</h1>
+
+    <div class="alert alert-info">
+        <p>{{ meqale.text }}</p>
+        <p><b>Tarix: {{ meqale.date.date() }}</b></p>
+        <a href="/posts/{{ meqale.id }}/delete" class="btn btn-danger">Sil</a>
+        <a href="/posts/{{ meqale.id }}/update" class="btn btn-success">Dəyişdir</a>
+    </div>
+
+
+</div>
+{% endblock %}

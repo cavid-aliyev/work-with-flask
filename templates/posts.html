@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Bütün Qeydlər
+{% endblock %}
+
+
+{% block body %}
+<div class="container">
+    <h1>Bütün Qeydlər</h1>
+
+    <!--Meqale yoxdursa saytda bize bir bildiriw gelsin-->
+    {% if meqaleler|length > 0 %}
+       {% for el in meqaleler %}
+       <div class="alert alert-info">
+         <h2>{{ el.title }}</h2>
+           <p>{{ el.intro }}</p>
+         <p><b>Tarix: {{ el.date.date() }}</b></p>
+          <a href="/posts/{{ el.id }}" class="btn btn-warning">Ətraflı</a>
+       </div>
+      {% endfor %}
+    {% else%}
+    <p>Saytda hələki qeyd yoxdur</p>
+    {%endif%}
+</div>
+{% endblock %}
