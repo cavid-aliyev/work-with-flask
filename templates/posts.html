@@ -9,7 +9,7 @@ Bütün Qeydlər
 <div class="container">
     <h1>Bütün Qeydlər</h1>
 
-    <!--Meqale yoxdursa saytda bize bir bildiriw gelsin-->
+    <!--Qeyd yoxdursa saytda bizə bir bildiriş gəlsin-->
     {% if meqaleler|length > 0 %}
        {% for el in meqaleler %}
        <div class="alert alert-info">
@@ -19,7 +19,7 @@ Bütün Qeydlər
           <a href="/posts/{{ el.id }}" class="btn btn-warning">Ətraflı</a>
        </div>
       {% endfor %}
-    {% else%}
+    {% else %}
     <p>Saytda hələki qeyd yoxdur</p>
     {%endif%}
 </div>
